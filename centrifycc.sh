@@ -286,12 +286,12 @@ function do_cenroll()
           --name "$COMPUTER_NAME" \
           --address "$CENTRIFYCC_NETWORK_ADDR" \
           "${CMDPARAM[@]}"
-    #r=$?
-    r=0
+    r=$?
+    #r=0
     if [ $r -ne 0 ];then
         echo "$CENTRIFY_MSG_PREX: cenroll failed!" 
-        return $r
-	#return 0
+        #return $r
+	return 0
     fi
     /usr/bin/cinfo
     r=$?
