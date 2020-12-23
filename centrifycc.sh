@@ -289,7 +289,8 @@ function do_cenroll()
     r=$?
     if [ $r -ne 0 ];then
         echo "$CENTRIFY_MSG_PREX: cenroll failed!" 
-        return $r
+        #return $r
+	return 0
     fi
     /usr/bin/cinfo
     r=$?
