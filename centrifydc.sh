@@ -536,8 +536,8 @@ function start_deploy()
       do_adjoin
       r=$? && [ $r -ne 0 ] && return $r
       
-      #do_adedit
-      #r=$? && [ $r -ne 0 ] && return $r
+      do_adedit
+      r=$? && [ $r -ne 0 ] && return $r
 
       install_leave_join_service
     fi
