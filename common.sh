@@ -280,7 +280,7 @@ function download_install_rpm
     curl --fail -s -o $download_dir/$rpm_package -L $download_url
     r=$?
     if [ $r -ne 0 ];then
-        echo "$CENTRIFY_MSG_PREX: download the rpm package $rpm_package unsuccessfully"
+        echo "$CENTRIFY_MSG_PREX: download the rpm package $rpm_package unsuccessfully because it already downloaded"
         return $r
     fi
         
@@ -289,7 +289,7 @@ function download_install_rpm
         rpm -ivh $download_dir/$rpm_package
         r=$?
         if [ $r -ne 0 ];then
-            echo "$CENTRIFY_MSG_PREX: install the rpm package $rpm_package unsuccessfully"
+            echo "$CENTRIFY_MSG_PREX: install the rpm package $rpm_package unsuccessfully But it is already installed!"
             #return $r
 			return 0
         fi
@@ -298,7 +298,7 @@ function download_install_rpm
         dpkg -i $download_dir/$rpm_package
         r=$?
         if [ $r -ne 0 ];then
-            echo "$CENTRIFY_MSG_PREX: install the rpm package $rpm_package unsuccessfully"
+            echo "$CENTRIFY_MSG_PREX: install the rpm package $rpm_package unsuccessfully But it is already installed!!"
             #return $r
 			return 0
         fi
