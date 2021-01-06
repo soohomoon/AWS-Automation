@@ -289,7 +289,7 @@ function do_cenroll()
     r=$?
     #r=0
     if [ $r -ne 0 ];then
-        echo "$CENTRIFY_MSG_PREX: cenroll failed!" 
+        echo "$CENTRIFY_MSG_PREX: cenroll failed! Why???" 
         #return $r
 	return 0
     fi
