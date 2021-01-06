@@ -224,7 +224,7 @@ function vault_accounts()
         fi
         r=$?
         if [ $r -ne 0 ];then
-            echo "$CENTRIFY_MSG_PREX: failed to set up post-enroll hook" && return $r
+            echo "$CENTRIFY_MSG_PREX: failed to set up post-enroll hook --- ERROR HAPPENS HERE" && return $r
         fi
     fi
 
